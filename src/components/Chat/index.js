@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import * as s from "./styles";
 
 const Chat = ({ dialogue }) => {
@@ -17,6 +17,11 @@ const Chat = ({ dialogue }) => {
       </s.Header>
 
       <s.Content />
+
+      <s.SendMessage>
+        <s.SendMessageInput />
+        <s.SendMessageSubmit />
+      </s.SendMessage>
     </s.Chat>
   );
 };

@@ -7,7 +7,7 @@ export const Chat = styled.div`
   display: flex;
   flex-direction: column;
 
-  ${props => !props.message && `
+  ${props => !props.dialogue && `
     align-items: center;
     justify-content: center;
   `};

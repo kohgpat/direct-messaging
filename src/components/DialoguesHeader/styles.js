@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const MessagesListTopbar = styled.div`
+export const DialoguesHeader = styled.div`
   padding: 30px;
 `;
 

@@ -1,14 +1,14 @@
 import React from "react";
-import MessagesListTopbar from "../MessagesListTopbar";
+import DialoguesHeader from "../DialoguesHeader";
 import * as s from "./styles";
 
-const MessagesList = ({ messages }) => {
+const Dialogues = ({ dialogues }) => {
   return (
-    <s.MessagesList>
-      <MessagesListTopbar />
+    <s.Dialogues>
+      <DialoguesHeader />
 
       <s.List>
-        {messages.map(item => (
+        {dialogues.map(item => (
           <s.Item key={item.id}>
             <s.ItemHeader>
               <s.ItemAvatar />
@@ -25,8 +25,8 @@ const MessagesList = ({ messages }) => {
           </s.Item>
         ))}
       </s.List>
-    </s.MessagesList>
+    </s.Dialogues>
   );
 };
 
-export default MessagesList;
+export default Dialogues;

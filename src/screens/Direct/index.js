@@ -1,10 +1,10 @@
 import React from "react";
 import Screen from "../../components/Screen";
 import Sidebar from "../../components/Sidebar";
-import MessagesList from "../../components/MessagesList";
+import Dialogues from "../../components/Dialogues";
 import Chat from "../../components/Chat";
 
-const messages = [
+const dialogues = [
   {
     id: 1,
     user: {
@@ -50,8 +50,8 @@ const messages = [
 const Direct = () => (
   <Screen horizontal>
     <Sidebar />
-    <MessagesList messages={messages} />
-    <Chat message={messages[0]} />
+    <Dialogues dialogues={dialogues} />
+    <Chat dialogue={dialogues[0]} />
   </Screen>
 );
 

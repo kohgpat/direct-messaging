@@ -1,18 +1,18 @@
 import React from "react";
 import * as s from "./styles";
 
-const Chat = ({ message }) => {
-  if (!message) {
+const Chat = ({ dialogue }) => {
+  if (!dialogue) {
     return <s.Chat />;
   }
 
   return (
-    <s.Chat message={message}>
+    <s.Chat dialogue={dialogue}>
       <s.Header>
         <s.HeaderUserAvatar />
         <s.HeaderUserInfo>
-          <s.HeaderUserName>{message.user.name}</s.HeaderUserName>
-          <s.HeaderUserStatus>{message.user.status}</s.HeaderUserStatus>
+          <s.HeaderUserName>{dialogue.user.name}</s.HeaderUserName>
+          <s.HeaderUserStatus>{dialogue.user.status}</s.HeaderUserStatus>
         </s.HeaderUserInfo>
       </s.Header>
 

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const MessagesList = styled.div`
+export const Dialogues = styled.div`
   height: 100%;
   width: 450px;
   background-color: #FCFCFC;

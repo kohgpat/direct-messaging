@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const MessagesList = styled.div`
   height: 100%;
-  width: 100%;
+  width: 450px;
   background-color: #FCFCFC;
   background: linear-gradient(119.19deg, #FFFFFF 0%, #F8F8F8 65.34%, #FFFFFF 100%);
   display: flex;

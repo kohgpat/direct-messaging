@@ -3,6 +3,7 @@ import Screen from "../../components/Screen";
 import LeftMenu from "../../components/LeftMenu";
 import Dialogues from "../../components/Dialogues";
 import Chat from "../../components/Chat";
+import AboutUser from "../../components/AboutUser";
 
 const dialogues = [
   {
@@ -25,7 +26,16 @@ const dialogues = [
     id: 3,
     user: {
       name: "Tobias Williams",
-      status: "Offline"
+      status: "Offline",
+      location: "Paris, France",
+      description:
+        "Help people to build websites and apps + grow awareness in social media 🔥",
+      socialNetworks: [],
+      contacts: {
+        phone: "+(33 1) 45 55 01 10",
+        email: "info@uxdesigner.im"
+      },
+      dob: "14.05.1992"
     },
     message: "I remember everything mate. See you later!"
   },
@@ -51,7 +61,8 @@ const Direct = () => (
   <Screen horizontal>
     <LeftMenu />
     <Dialogues dialogues={dialogues} />
-    <Chat dialogue={dialogues[0]} />
+    <Chat dialogue={dialogues[2]} />
+    <AboutUser user={dialogues[2].user} />
   </Screen>
 );
 

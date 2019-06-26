@@ -6,6 +6,7 @@ export const Chat = styled.div`
   background-color: #FFFFFF;
   display: flex;
   flex-direction: column;
+  border-left: 1px solid #EFECE8;
 
   ${props => !props.dialogue && `
     align-items: center;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SidebarCurrentUser = styled.div``;
+export const LeftMenuCurrentUser = styled.div``;
 
 export const Avatar = styled.div`
   height: 50px;

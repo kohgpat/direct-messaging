@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Sidebar = styled.aside`
+export const LeftMenu = styled.aside`
   height: 100vh;
   width: 100px;
   background-color: #292F4C;

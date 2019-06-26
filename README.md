@@ -1,3 +1,5 @@
+Based on freebie sketch https://dribbble.com/shots/5262706-Daily-UI-13-Direct-Messaging
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

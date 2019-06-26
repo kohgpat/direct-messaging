@@ -69,6 +69,6 @@ export const ItemMessage = styled.p`
   margin: 0;
   width: 80%;
   color: #181C2F;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 22px;
 `;

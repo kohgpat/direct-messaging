@@ -78,7 +78,26 @@ const dialogues = [
         },
         sendedAt: "Today 06:18 PM",
         message: "I remember everything mate. See you later!"
-      }
+      },
+      {
+        id: 5,
+        user: {
+          id: 3,
+          name: "Tobias Williams"
+        },
+        sendedAt: "Yesterday 14:26 PM",
+        message: "Hi Alex! What's up?"
+      },
+      {
+        id: 6,
+        user: {
+          id: 10,
+          name: "Bob Ross"
+        },
+        sendedAt: "Yesterday 14:38 PM",
+        message:
+          "Oh, hello! All perfectly. I work, study and know this wonderful world!"
+      },
     ]
   },
   {

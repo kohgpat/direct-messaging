@@ -16,7 +16,14 @@ const Chat = ({ dialogue }) => {
         </s.HeaderUserInfo>
       </s.Header>
 
-      <s.Content />
+      <s.Content>
+        {dialogue.messages.map(message => (
+          <s.Message key={message.id} currentUser={message.user.id === 10}>
+            <s.MessageText>{message.message}</s.MessageText>
+            <s.MessageSendedAt>{message.sendedAt}</s.MessageSendedAt>
+          </s.Message>
+        ))}
+      </s.Content>
 
       <s.SendMessage>
         <s.SendMessageInput />

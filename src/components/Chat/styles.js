@@ -3,12 +3,14 @@ import styled from "styled-components";
 export const Chat = styled.div`
   height: 100%;
   width: 100%;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
-  border-left: 1px solid #EFECE8;
+  border-left: 1px solid #efece8;
 
-  ${props => !props.dialogue && `
+  ${props =>
+    !props.dialogue &&
+    `
     align-items: center;
     justify-content: center;
   `};
@@ -16,7 +18,7 @@ export const Chat = styled.div`
 
 export const Header = styled.div`
   padding: 30px;
-  border-bottom: 1px solid #EFECE8;
+  border-bottom: 1px solid #efece8;
   display: flex;
 `;
 
@@ -34,7 +36,7 @@ export const HeaderUserInfo = styled.div`
 `;
 
 export const HeaderUserName = styled.span`
-  color: #181C2F;
+  color: #181c2f;
   font-weight: bold;
   font-size: 18px;
   line-height: 22px;
@@ -42,7 +44,7 @@ export const HeaderUserName = styled.span`
 `;
 
 export const HeaderUserStatus = styled.span`
-  color: #BABBC1;
+  color: #babbc1;
   font-weight: medium;
   font-size: 14px;
   line-height: 22px;
@@ -53,6 +55,44 @@ export const Content = styled.div`
   height: 100%;
   width: 100%;
   background-color: #fff;
+  overflow-y: auto;
+`;
+
+export const Message = styled.div`
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  margin-bottom: 20px;
+
+  ${props => props.currentUser && `
+    margin-left: auto;
+    align-items: flex-end;
+
+    ${MessageText} {
+      background-color: #F14C4F;
+      color: #fff;
+    }
+
+    ${MessageSendedAt} {
+      margin-left:0;
+      margin-right: 20px;
+    }
+  `}
+`;
+
+export const MessageText = styled.span`
+  margin: 0;
+  padding: 15px 25px;
+  background-color: #fff;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 35px;
+`;
+
+export const MessageSendedAt = styled.span`
+  margin-top: 3px;
+  color: #B6B8BA;
+  font-size: 12px;
+  margin-left: 20px;
 `;
 
 export const SendMessage = styled.div`
@@ -67,12 +107,15 @@ export const SendMessage = styled.div`
   position: relative;
 `;
 
-export const SendMessageInput = styled.textarea.attrs({ name: "message", rows: 1 })`
+export const SendMessageInput = styled.textarea.attrs({
+  name: "message",
+  rows: 1
+})`
   min-height: 48px;
   font-size: 16px;
-  background-color: #F9F8F8;
+  background-color: #f9f8f8;
   border-radius: 24px;
-  border: 1px solid #F9F8F8;
+  border: 1px solid #f9f8f8;
   width: 100%;
   padding: 16px 32px;
   resize: none;
@@ -88,8 +131,8 @@ export const SendMessageSubmit = styled.button.attrs({ type: "submit" })`
   height: 52px;
   width: 52px;
   border-radius: 50%;
-  border: 1px solid #F44A4A;
-  background-color: #F44A4A;
+  border: 1px solid #f44a4a;
+  background-color: #f44a4a;
   display: flex;
   align-items: center;
   justify-content: center;

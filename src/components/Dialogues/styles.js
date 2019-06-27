@@ -24,6 +24,49 @@ export const Item = styled.div`
   box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
   margin-bottom: 20px;
+  position: relative;
+  width: 300px;
+
+  ${props => props.selected && `
+    background-color: #292F4C;
+
+    &::before {
+      content: "";
+      height: 100%;
+      width: 20px;
+      background-color: #F04B4E;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
+    }
+
+    &::after {
+      content: "";
+      height: 100%;
+      width: 20px;
+      background-color: #F04B4E;
+      background: linear-gradient(270deg, #292F4C 4%, #F04242 280%);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 6px;
+    }
+
+    ${ItemUserStatus} {
+      color: #7F8293;
+    }
+
+    ${ItemUserName} {
+      color: #fff;
+    }
+
+    ${ItemMessage} {
+      color: #fff;
+    }
+  `};
 `;
 
 export const ItemHeader = styled.div`

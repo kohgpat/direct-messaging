@@ -9,7 +9,7 @@ const Dialogues = ({ dialogues }) => {
 
       <s.List>
         {dialogues.map(item => (
-          <s.Item key={item.id}>
+          <s.Item key={item.id} selected={item.id === 3}>
             <s.ItemHeader>
               <s.ItemAvatar />
 

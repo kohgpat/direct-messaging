@@ -64,7 +64,9 @@ export const Message = styled.div`
   max-width: 50%;
   margin-bottom: 20px;
 
-  ${props => props.currentUser && `
+  ${props =>
+    props.currentUser &&
+    `
     margin-left: auto;
     align-items: flex-end;
 
@@ -90,7 +92,7 @@ export const MessageText = styled.span`
 
 export const MessageSendedAt = styled.span`
   margin-top: 3px;
-  color: #B6B8BA;
+  color: #b6b8ba;
   font-size: 12px;
   margin-left: 20px;
 `;
@@ -133,6 +135,7 @@ export const SendMessageSubmit = styled.button.attrs({ type: "submit" })`
   border-radius: 50%;
   border: 1px solid #f44a4a;
   background-color: #f44a4a;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;

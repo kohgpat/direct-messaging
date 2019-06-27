@@ -1,4 +1,5 @@
 import React from "react";
+import { ReactComponent as SendIcon } from "./images/send-icon.svg";
 import * as s from "./styles";
 
 const Chat = ({ dialogue }) => {
@@ -27,7 +28,9 @@ const Chat = ({ dialogue }) => {
 
       <s.SendMessage>
         <s.SendMessageInput />
-        <s.SendMessageSubmit />
+        <s.SendMessageSubmit>
+          <SendIcon />
+        </s.SendMessageSubmit>
       </s.SendMessage>
     </s.Chat>
   );

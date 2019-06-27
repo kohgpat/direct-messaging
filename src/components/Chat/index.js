@@ -1,8 +1,11 @@
 import React from "react";
+import { useDirectUI } from "../../contexts/Direct/UI";
 import { ReactComponent as SendIcon } from "./images/send-icon.svg";
 import * as s from "./styles";
 
 const Chat = ({ dialogue }) => {
+  const { toggleAboutUser } = useDirectUI();
+
   if (!dialogue) {
     return <s.Chat />;
   }
@@ -12,7 +15,9 @@ const Chat = ({ dialogue }) => {
       <s.Header>
         <s.HeaderUserAvatar />
         <s.HeaderUserInfo>
-          <s.HeaderUserName>{dialogue.user.name}</s.HeaderUserName>
+          <s.HeaderUserName onClick={toggleAboutUser}>
+            {dialogue.user.name}
+          </s.HeaderUserName>
           <s.HeaderUserStatus>{dialogue.user.status}</s.HeaderUserStatus>
         </s.HeaderUserInfo>
       </s.Header>

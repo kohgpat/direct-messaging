@@ -1,15 +1,22 @@
 import React from "react";
+import { useDirectUI } from "../../contexts/Direct/UI";
 import * as s from "./styles";
 
 const AboutUser = ({ user }) => {
+  const { ui, toggleAboutUser } = useDirectUI();
+
   if (!user) {
+    return null;
+  }
+
+  if (!ui.aboutUser.show) {
     return null;
   }
 
   return (
     <s.AboutUser>
       <s.Controls>
-        <s.ControlClose />
+        <s.ControlClose onClick={toggleAboutUser} />
       </s.Controls>
 
       <s.UserInfo noPaddingTop center>

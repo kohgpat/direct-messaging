@@ -41,6 +41,7 @@ export const HeaderUserName = styled.span`
   font-size: 18px;
   line-height: 22px;
   margin-bottom: 5px;
+  cursor: pointer;
 `;
 
 export const HeaderUserStatus = styled.span`

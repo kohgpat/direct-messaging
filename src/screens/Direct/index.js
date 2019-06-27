@@ -4,6 +4,7 @@ import LeftMenu from "../../components/LeftMenu";
 import Dialogues from "../../components/Dialogues";
 import Chat from "../../components/Chat";
 import AboutUser from "../../components/AboutUser";
+import { DirectUIProvider } from "../../contexts/Direct/UI";
 
 const dialogues = [
   {
@@ -97,7 +98,7 @@ const dialogues = [
         sendedAt: "Yesterday 14:38 PM",
         message:
           "Oh, hello! All perfectly. I work, study and know this wonderful world!"
-      },
+      }
     ]
   },
   {
@@ -120,13 +121,17 @@ const dialogues = [
   }
 ];
 
-const Direct = () => (
-  <Screen horizontal>
-    <LeftMenu />
-    <Dialogues dialogues={dialogues} />
-    <Chat dialogue={dialogues[2]} />
-    <AboutUser user={dialogues[2].user} />
-  </Screen>
-);
+const Direct = () => {
+  return (
+    <Screen horizontal>
+      <DirectUIProvider>
+        <LeftMenu />
+        <Dialogues dialogues={dialogues} />
+        <Chat dialogue={dialogues[2]} />
+        <AboutUser user={dialogues[2].user} />
+      </DirectUIProvider>
+    </Screen>
+  );
+};
 
 export default Direct;

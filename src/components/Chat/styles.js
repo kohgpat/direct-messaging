@@ -76,6 +76,12 @@ export const SendMessageInput = styled.textarea.attrs({ name: "message", rows: 1
   width: 100%;
   padding: 16px 32px;
   resize: none;
+  outline: none;
+
+  &:active,
+  &:focus {
+    border: 1px solid #efece8;
+  }
 `;
 
 export const SendMessageSubmit = styled.button.attrs({ type: "submit" })`

@@ -12,7 +12,8 @@ const dialogues = [
       name: "Donald Johnson",
       status: "Online"
     },
-    message: "Analysis of foreign experience, as it is common"
+    message: "Analysis of foreign experience, as it is common",
+    messages: []
   },
   {
     id: 2,
@@ -20,7 +21,8 @@ const dialogues = [
       name: "Anna Dormun",
       status: "Offline"
     },
-    message: "It seems logical that the strategy of providing!"
+    message: "It seems logical that the strategy of providing!",
+    messages: []
   },
   {
     id: 3,
@@ -37,7 +39,47 @@ const dialogues = [
       },
       dob: "14.05.1992"
     },
-    message: "I remember everything mate. See you later!"
+    message: "I remember everything mate. See you later!",
+    messages: [
+      {
+        id: 1,
+        user: {
+          id: 3,
+          name: "Tobias Williams"
+        },
+        sendedAt: "Yesterday 14:26 PM",
+        message: "Hi Alex! What's up?"
+      },
+      {
+        id: 2,
+        user: {
+          id: 10,
+          name: "Bob Ross"
+        },
+        sendedAt: "Yesterday 14:38 PM",
+        message:
+          "Oh, hello! All perfectly. I work, study and know this wonderful world!"
+      },
+      {
+        id: 3,
+        user: {
+          id: 3,
+          name: "Tobias Williams"
+        },
+        sendedAt: "Yesterday 19:26 PM",
+        message: null,
+        audio: true
+      },
+      {
+        id: 4,
+        user: {
+          id: 10,
+          name: "Bob Ross"
+        },
+        sendedAt: "Today 06:18 PM",
+        message: "I remember everything mate. See you later!"
+      }
+    ]
   },
   {
     id: 4,
@@ -45,7 +87,8 @@ const dialogues = [
       name: "Jennifer Watkins",
       status: "Online"
     },
-    message: "I will miss you, too, my dear!"
+    message: "I will miss you, too, my dear!",
+    messages: []
   },
   {
     id: 5,
@@ -53,7 +96,8 @@ const dialogues = [
       name: "Steven Norton",
       status: "Online"
     },
-    message: "Welcome to community!"
+    message: "Welcome to community!",
+    messages: []
   }
 ];
 

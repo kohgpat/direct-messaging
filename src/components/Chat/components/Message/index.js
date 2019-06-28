@@ -1,0 +1,11 @@
+import React from "react";
+import * as s from "./styles";
+
+const Message = ({ message }) => (
+  <s.Message currentUser={message.user.id === 10}>
+    <s.MessageText>{message.message}</s.MessageText>
+    <s.MessageSendedAt>{message.sendedAt}</s.MessageSendedAt>
+  </s.Message>
+);
+
+export default Message;

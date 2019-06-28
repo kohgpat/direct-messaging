@@ -1,6 +1,7 @@
 import React from "react";
 import { useDirectUI } from "../../contexts/Direct/UI";
 import { ReactComponent as SendIcon } from "./images/send-icon.svg";
+import Message from "./components/Message";
 import * as s from "./styles";
 
 const Chat = ({ dialogue }) => {
@@ -24,10 +25,7 @@ const Chat = ({ dialogue }) => {
 
       <s.Content>
         {dialogue.messages.map(message => (
-          <s.Message key={message.id} currentUser={message.user.id === 10}>
-            <s.MessageText>{message.message}</s.MessageText>
-            <s.MessageSendedAt>{message.sendedAt}</s.MessageSendedAt>
-          </s.Message>
+          <Message key={message.id} message={message} />
         ))}
       </s.Content>
 

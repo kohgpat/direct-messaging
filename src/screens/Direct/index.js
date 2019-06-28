@@ -49,7 +49,9 @@ const dialogues = [
           name: "Tobias Williams"
         },
         sendedAt: "Yesterday 14:26 PM",
-        message: "Hi Alex! What's up?"
+        message: "Hi Alex! What's up?",
+        type: "text",
+        length: null
       },
       {
         id: 2,
@@ -59,7 +61,9 @@ const dialogues = [
         },
         sendedAt: "Yesterday 14:38 PM",
         message:
-          "Oh, hello! All perfectly. I work, study and know this wonderful world!"
+          "Oh, hello! All perfectly. I work, study and know this wonderful world!",
+        type: "text",
+        length: null
       },
       {
         id: 3,
@@ -69,7 +73,8 @@ const dialogues = [
         },
         sendedAt: "Yesterday 19:26 PM",
         message: null,
-        audio: true
+        length: "01.24",
+        type: "audio"
       },
       {
         id: 4,
@@ -78,7 +83,9 @@ const dialogues = [
           name: "Bob Ross"
         },
         sendedAt: "Today 06:18 PM",
-        message: "I remember everything mate. See you later!"
+        message: "I remember everything mate. See you later!",
+        type: "text",
+        length: null
       },
       {
         id: 5,
@@ -87,7 +94,9 @@ const dialogues = [
           name: "Tobias Williams"
         },
         sendedAt: "Yesterday 14:26 PM",
-        message: "Hi Alex! What's up?"
+        message: "Hi Alex! What's up?",
+        type: "text",
+        length: null
       },
       {
         id: 6,
@@ -97,7 +106,9 @@ const dialogues = [
         },
         sendedAt: "Yesterday 14:38 PM",
         message:
-          "Oh, hello! All perfectly. I work, study and know this wonderful world!"
+          "Oh, hello! All perfectly. I work, study and know this wonderful world!",
+        type: "text",
+        length: null
       }
     ]
   },

@@ -7,7 +7,7 @@ export const Message = styled.div`
   margin-bottom: 20px;
 
   ${props =>
-    props.currentUser &&
+    props.isCurrentUser &&
     `
     margin-left: auto;
     align-items: flex-end;

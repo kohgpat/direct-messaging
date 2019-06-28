@@ -1,11 +1,14 @@
 import React from "react";
-import * as s from "./styles";
+import TextMessage from "./components/TextMessage";
 
-const Message = ({ message }) => (
-  <s.Message currentUser={message.user.id === 10}>
-    <s.MessageText>{message.message}</s.MessageText>
-    <s.MessageSendedAt>{message.sendedAt}</s.MessageSendedAt>
-  </s.Message>
-);
+const Message = ({ message }) => {
+  let comp;
+
+  if (message.audio) {
+    comp = TextMessage;
+  }
+
+  return <TextMessage message={message} />;
+};
 
 export default Message;

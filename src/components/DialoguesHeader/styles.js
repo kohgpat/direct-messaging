@@ -12,6 +12,7 @@ export const SearchInputBar = styled.div`
   display: flex;
   align-items: center;
   position: relative;
+  margin-right: 20px;
 `;
 
 export const SearchInputIcon = styled.div`

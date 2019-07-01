@@ -25,7 +25,6 @@ export const Item = styled.div`
   border-radius: 6px;
   margin-bottom: 20px;
   position: relative;
-  width: 300px;
 
   ${props => props.selected && `
     background-color: #292F4C;

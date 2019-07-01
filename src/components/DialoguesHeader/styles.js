@@ -37,7 +37,7 @@ export const SearchInput = styled.input.attrs({
   background-color: #f9f8f8;
   border-radius: 24px;
   border: 1px solid #f9f8f8;
-  width: 300px;
+  max-width: 300px;
   padding: 16px 32px 16px 50px;
 
   &::placeholder {

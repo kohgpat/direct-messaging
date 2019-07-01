@@ -7,6 +7,11 @@ const DialoguesHeader = () => (
       <s.SearchInputIcon />
       <s.SearchInput />
     </s.SearchInputBar>
+
+    <s.Bookmarks>
+      <s.BookmarksCount>147</s.BookmarksCount>
+      <s.BookmarksIcon />
+    </s.Bookmarks>
   </s.DialoguesHeader>
 );
 

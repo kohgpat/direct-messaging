@@ -1,8 +1,11 @@
 import styled from "styled-components";
 import searchIcon from "./images/search-icon.svg";
+import bookmarkIcon from "./images/bookmark-icon.svg";
 
 export const DialoguesHeader = styled.div`
   padding: 30px;
+  display: flex;
+  align-items: center;
 `;
 
 export const SearchInputBar = styled.div`
@@ -39,4 +42,29 @@ export const SearchInput = styled.input.attrs({
   &::placeholder {
     color: #B6B7BC;
   }
+`;
+
+export const Bookmarks = styled.div`
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+`;
+
+export const BookmarksCount = styled.span`
+  font-size: 14px;
+  font-weight: bold;
+  color: #D0D1D7;
+`;
+
+export const BookmarksIcon = styled.button.attrs({ type: "button" })`
+  margin-left: 10px;
+  height: 26px;
+  width: 18px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  background-image: url(${bookmarkIcon});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 `;

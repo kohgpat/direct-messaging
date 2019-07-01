@@ -44,9 +44,28 @@ export const HeaderUserName = styled.span`
   cursor: pointer;
 `;
 
+export const HeaderUserMeta = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
 export const HeaderUserStatus = styled.span`
   color: #babbc1;
-  font-weight: medium;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+`;
+
+export const HeaderUserSeparator = styled.div`
+  margin: 0 8px;
+  color: #A3A4AC;
+  font-size: 14px;
+  line-height: 22px;
+`;
+
+export const HeaderUserLastSeen = styled.span`
+  color: #babbc1;
+  font-weight: 400;
   font-size: 14px;
   line-height: 22px;
 `;

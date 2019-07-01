@@ -38,7 +38,8 @@ const dialogues = [
         phone: "+(33 1) 45 55 01 10",
         email: "info@uxdesigner.im"
       },
-      dob: "14.05.1992"
+      dob: "14.05.1992",
+      lastSeen: "Last seen 3 hours ago"
     },
     message: "I remember everything mate. See you later!",
     messages: [

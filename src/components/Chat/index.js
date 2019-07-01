@@ -19,7 +19,12 @@ const Chat = ({ dialogue }) => {
           <s.HeaderUserName onClick={toggleAboutUser}>
             {dialogue.user.name}
           </s.HeaderUserName>
-          <s.HeaderUserStatus>{dialogue.user.status}</s.HeaderUserStatus>
+
+          <s.HeaderUserMeta>
+            <s.HeaderUserStatus>{dialogue.user.status}</s.HeaderUserStatus>
+            <s.HeaderUserSeparator>·</s.HeaderUserSeparator>
+            <s.HeaderUserLastSeen>{dialogue.user.lastSeen}</s.HeaderUserLastSeen>
+          </s.HeaderUserMeta>
         </s.HeaderUserInfo>
       </s.Header>
 

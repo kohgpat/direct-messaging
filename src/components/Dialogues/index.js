@@ -1,15 +1,23 @@
 import React from "react";
 import DialoguesHeader from "../DialoguesHeader";
+import { useDirect } from "../../contexts/Direct";
 import * as s from "./styles";
 
-const Dialogues = ({ dialogues }) => {
+const Dialogues = () => {
+  const { getDialogues, selectDialogue } = useDirect();
+  const dialogues = getDialogues();
+
   return (
     <s.Dialogues>
       <DialoguesHeader />
 
       <s.List>
         {dialogues.map(item => (
-          <s.Item key={item.id} selected={item.id === 3}>
+          <s.Item
+            key={item.id}
+            selected={item.selected}
+            onClick={() => selectDialogue(item)}
+          >
             <s.ItemHeader>
               <s.ItemAvatar status={item.user.status} />
 

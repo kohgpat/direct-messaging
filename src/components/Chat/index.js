@@ -1,5 +1,6 @@
 import React from "react";
 import { useDirectUI } from "../../contexts/Direct/UI";
+import { useDirect } from "../../contexts/Direct";
 import { ReactComponent as SendIcon } from "./images/send-icon.svg";
 import { ReactComponent as CallIcon } from "./images/call-icon.svg";
 import { ReactComponent as VideoCallIcon } from "./images/video-call-icon.svg";
@@ -7,8 +8,11 @@ import { ReactComponent as OptionsIcon } from "./images/options-icon.svg";
 import Message from "./components/Message";
 import * as s from "./styles";
 
-const Chat = ({ dialogue, user }) => {
+const Chat = () => {
   const { toggleAboutUser } = useDirectUI();
+  const { getSelectedDialogue } = useDirect();
+  const dialogue = getSelectedDialogue();
+  const user = dialogue && dialogue.user;
 
   if (!dialogue) {
     return <s.Chat />;
@@ -27,7 +31,9 @@ const Chat = ({ dialogue, user }) => {
           <s.HeaderUserMeta>
             <s.HeaderUserStatus>{dialogue.user.status}</s.HeaderUserStatus>
             <s.HeaderUserSeparator>·</s.HeaderUserSeparator>
-            <s.HeaderUserLastSeen>{dialogue.user.lastSeen}</s.HeaderUserLastSeen>
+            <s.HeaderUserLastSeen>
+              {dialogue.user.lastSeen}
+            </s.HeaderUserLastSeen>
           </s.HeaderUserMeta>
         </s.HeaderUserInfo>
 

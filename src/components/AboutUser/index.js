@@ -1,9 +1,14 @@
 import React from "react";
 import { useDirectUI } from "../../contexts/Direct/UI";
+import { useDirect } from "../../contexts/Direct";
 import * as s from "./styles";
 
-const AboutUser = ({ user }) => {
+const AboutUser = () => {
+  const { getSelectedDialogue } = useDirect();
   const { ui, toggleAboutUser } = useDirectUI();
+
+  const dialogue = getSelectedDialogue();
+  const user = dialogue && dialogue.user;
 
   if (!user) {
     return null;

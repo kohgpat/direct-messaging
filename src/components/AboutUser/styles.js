@@ -10,6 +10,7 @@ export const AboutUser = styled.div`
   flex-direction: column;
   border-left: 1px solid #efece8;
   flex-shrink: 0;
+  overflow-y: auto;
 `;
 
 export const Controls = styled.div`
@@ -116,8 +117,19 @@ export const UserMediaHeaderCount = styled.span`
 export const UserMediaHeaderLinkAll = styled.a`
   font-size: 14px;
   color: #F44A4A;
+  cursor: pointer;
 `;
 
 export const UserMediaImages = styled.div`
   margin-top: 20px;
+  display: grid;
+  gap: 11px;
+  grid-template-columns: 76px 76px 76px;
+`;
+
+export const UserMediaImage = styled.div`
+  width: 76px;
+  height: 76px;
+  background-color: #f1f1f1;
+  cursor: pointer;
 `;

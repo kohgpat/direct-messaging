@@ -5,7 +5,7 @@ const DirectUIContext = React.createContext();
 function DirectUIProvider(props) {
   const [ui, setUI] = useState({
     aboutUser: {
-      show: false
+      show: true
     }
   });
 

@@ -56,7 +56,11 @@ const AboutUser = ({ user }) => {
             <s.UserMediaHeaderLinkAll>See All ></s.UserMediaHeaderLinkAll>
           </s.UserMediaHeader>
 
-          <s.UserMediaImages />
+          <s.UserMediaImages>
+            <s.UserMediaImage />
+            <s.UserMediaImage />
+            <s.UserMediaImage />
+          </s.UserMediaImages>
         </s.UserMedia>
       </s.UserInfo>
     </s.AboutUser>

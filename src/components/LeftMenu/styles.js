@@ -1,11 +1,4 @@
 import styled from "styled-components";
-import homeIcon from "./images/home-icon.svg";
-import sendIcon from "./images/send-icon.svg";
-import inboxIcon from "./images/inbox-icon.svg";
-import usersIcon from "./images/users-icon.svg";
-import notificationsIcon from "./images/notifications-icon.svg";
-import optionsIcon from "./images/options-icon.svg";
-import settingsIcon from "./images/settings-icon.svg";
 
 export const LeftMenu = styled.aside`
   height: 100vh;
@@ -34,6 +27,14 @@ export const NavItem = styled.a`
   width: 100%;
   position: relative;
 
+  &:active,
+  &:hover,
+  &:focus {
+    & > svg > path {
+      opacity: 1.0;
+    }
+  }
+
   ${props =>
     props.selected &&
     `
@@ -61,68 +62,9 @@ export const NavItem = styled.a`
       bottom: 0;
       left: 6px;
     }
-  `};
-`;
 
-export const NavItemIcon = styled.div`
-  background-color: transparent;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  ${props =>
-    props.home &&
-    `
-    background-image: url(${homeIcon});
-    height: 24px;
-    width: 24px;
-  `};
-
-  ${props =>
-    props.send &&
-    `
-    background-image: url(${sendIcon});
-    height: 24px;
-    width: 26px;
-  `};
-
-  ${props =>
-    props.inbox &&
-    `
-    background-image: url(${inboxIcon});
-    height: 20px;
-    width: 24px;
-  `};
-
-  ${props =>
-    props.users &&
-    `
-    background-image: url(${usersIcon});
-    height: 24px;
-    width: 26px;
-  `};
-
-  ${props =>
-    props.notifications &&
-    `
-    background-image: url(${notificationsIcon});
-    height: 27px;
-    width: 24px;
-  `};
-
-  ${props =>
-    props.options &&
-    `
-    background-image: url(${optionsIcon});
-    height: 6px;
-    width: 26px;
-  `};
-
-  ${props =>
-    props.settings &&
-    `
-    background-image: url(${settingsIcon});
-    height: 24px;
-    width: 24px;
+    & > svg > path {
+      opacity: 1.0;
+    }
   `};
 `;

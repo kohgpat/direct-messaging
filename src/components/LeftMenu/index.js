@@ -1,5 +1,12 @@
-import React from 'react';
+import React from "react";
 import LeftMenuCurrentUser from "../LeftMenuCurrentUser";
+import { ReactComponent as HomeIcon } from "./images/home-icon.svg";
+import { ReactComponent as SendIcon } from "./images/send-icon.svg";
+import { ReactComponent as InboxIcon } from "./images/inbox-icon.svg";
+import { ReactComponent as UsersIcon } from "./images/users-icon.svg";
+import { ReactComponent as NotificationsIcon } from "./images/notifications-icon.svg";
+import { ReactComponent as OptionsIcon } from "./images/options-icon.svg";
+import { ReactComponent as SettingsIcon } from "./images/settings-icon.svg";
 import * as s from "./styles";
 
 const LeftMenu = () => (
@@ -8,28 +15,28 @@ const LeftMenu = () => (
 
     <s.Nav>
       <s.NavItem href="#" alt="Home">
-        <s.NavItemIcon home />
+        <HomeIcon />
       </s.NavItem>
       <s.NavItem href="#" alt="Send">
-        <s.NavItemIcon send />
+        <SendIcon />
       </s.NavItem>
       <s.NavItem href="#" alt="Inbox" selected>
-        <s.NavItemIcon inbox />
+        <InboxIcon />
       </s.NavItem>
       <s.NavItem href="#" alt="Users">
-        <s.NavItemIcon users />
+        <UsersIcon />
       </s.NavItem>
       <s.NavItem href="#" alt="Notifications">
-        <s.NavItemIcon notifications />
+        <NotificationsIcon />
       </s.NavItem>
       <s.NavItem href="#" alt="Options">
-        <s.NavItemIcon options />
+        <OptionsIcon />
       </s.NavItem>
     </s.Nav>
 
     <s.Nav bottom>
       <s.NavItem href="#" alt="Settings">
-        <s.NavItemIcon settings />
+        <SettingsIcon />
       </s.NavItem>
     </s.Nav>
   </s.LeftMenu>

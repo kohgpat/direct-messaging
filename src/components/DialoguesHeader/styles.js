@@ -64,6 +64,7 @@ export const BookmarksIcon = styled.button.attrs({ type: "button" })`
   border: none;
   background-color: transparent;
   cursor: pointer;
+  padding: 0;
 
   &:active,
   &:focus,

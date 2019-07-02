@@ -5,8 +5,38 @@ import inboxIcon from "./images/inbox-icon.svg";
 import usersIcon from "./images/users-icon.svg";
 import notificationsIcon from "./images/notifications-icon.svg";
 import optionsIcon from "./images/options-icon.svg";
+import settingsIcon from "./images/settings-icon.svg";
 
-const navItemSelectedStyles = `
+export const LeftMenu = styled.aside`
+  height: 100vh;
+  width: 100px;
+  background-color: #292f4c;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const Nav = styled.nav`
+  margin-top: 20px;
+
+  ${props =>
+    props.bottom &&
+    `
+    margin-top: auto;
+  `};
+`;
+
+export const NavItem = styled.a`
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  width: 100%;
+  position: relative;
+
+  ${props =>
+    props.selected &&
+    `
     background-color: #292F4C;
 
     &::before {
@@ -31,44 +61,6 @@ const navItemSelectedStyles = `
       bottom: 0;
       left: 6px;
     }
-`;
-
-export const LeftMenu = styled.aside`
-  height: 100vh;
-  width: 100px;
-  background-color: #292f4c;
-  display: flex;
-  flex-direction: column;
-`;
-
-export const Nav = styled.nav`
-  margin-top: 60px;
-
-  ${props =>
-    props.bottom &&
-    `
-    margin-top: auto;
-  `};
-`;
-
-export const NavItem = styled.a`
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 25px;
-  width: 100%;
-  position: relative;
-
-  &:hover,
-  &:focus {
-    ${navItemSelectedStyles}
-  }
-
-  ${props =>
-    props.selected &&
-    `
-    ${navItemSelectedStyles}
   `};
 `;
 
@@ -124,5 +116,13 @@ export const NavItemIcon = styled.div`
     background-image: url(${optionsIcon});
     height: 6px;
     width: 26px;
+  `};
+
+  ${props =>
+    props.settings &&
+    `
+    background-image: url(${settingsIcon});
+    height: 24px;
+    width: 24px;
   `};
 `;

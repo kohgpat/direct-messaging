@@ -27,7 +27,11 @@ const LeftMenu = () => (
       </s.NavItem>
     </s.Nav>
 
-    <s.Nav bottom>S</s.Nav>
+    <s.Nav bottom>
+      <s.NavItem href="#" alt="Settings">
+        <s.NavItemIcon settings />
+      </s.NavItem>
+    </s.Nav>
   </s.LeftMenu>
 );
 

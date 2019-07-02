@@ -29,6 +29,34 @@ export const NavItem = styled.a`
   justify-content: center;
   padding: 25px;
   width: 100%;
+  position: relative;
+
+  ${props => props.selected && `
+    background-color: #292F4C;
+
+    &::before {
+      content: "";
+      height: 100%;
+      width: 20px;
+      background-color: #F04B4E;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    &::after {
+      content: "";
+      height: 100%;
+      width: 20px;
+      background-color: #F04B4E;
+      background: linear-gradient(270deg, #292F4C 4%, #F04242 280%);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 6px;
+    }
+  `};
 `;
 
 export const NavItemIcon = styled.div`

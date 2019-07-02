@@ -13,7 +13,7 @@ const LeftMenu = () => (
       <s.NavItem href="#" alt="Send">
         <s.NavItemIcon send />
       </s.NavItem>
-      <s.NavItem href="#" alt="Inbox">
+      <s.NavItem href="#" alt="Inbox" selected>
         <s.NavItemIcon inbox />
       </s.NavItem>
       <s.NavItem href="#" alt="Users">

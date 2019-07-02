@@ -6,32 +6,7 @@ import usersIcon from "./images/users-icon.svg";
 import notificationsIcon from "./images/notifications-icon.svg";
 import optionsIcon from "./images/options-icon.svg";
 
-export const LeftMenu = styled.aside`
-  height: 100vh;
-  width: 100px;
-  background-color: #292F4C;
-  display: flex;
-  flex-direction: column;
-`;
-
-export const Nav = styled.nav`
-  margin-top: 60px;
-
-  ${props => props.bottom && `
-    margin-top: auto;
-  `};
-`;
-
-export const NavItem = styled.a`
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 25px;
-  width: 100%;
-  position: relative;
-
-  ${props => props.selected && `
+const navItemSelectedStyles = `
     background-color: #292F4C;
 
     &::before {
@@ -56,6 +31,44 @@ export const NavItem = styled.a`
       bottom: 0;
       left: 6px;
     }
+`;
+
+export const LeftMenu = styled.aside`
+  height: 100vh;
+  width: 100px;
+  background-color: #292f4c;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const Nav = styled.nav`
+  margin-top: 60px;
+
+  ${props =>
+    props.bottom &&
+    `
+    margin-top: auto;
+  `};
+`;
+
+export const NavItem = styled.a`
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  width: 100%;
+  position: relative;
+
+  &:hover,
+  &:focus {
+    ${navItemSelectedStyles}
+  }
+
+  ${props =>
+    props.selected &&
+    `
+    ${navItemSelectedStyles}
   `};
 `;
 
@@ -65,37 +78,49 @@ export const NavItemIcon = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
 
-  ${props => props.home && `
+  ${props =>
+    props.home &&
+    `
     background-image: url(${homeIcon});
     height: 24px;
     width: 24px;
   `};
 
-  ${props => props.send && `
+  ${props =>
+    props.send &&
+    `
     background-image: url(${sendIcon});
     height: 24px;
     width: 26px;
   `};
 
-  ${props => props.inbox && `
+  ${props =>
+    props.inbox &&
+    `
     background-image: url(${inboxIcon});
     height: 20px;
     width: 24px;
   `};
 
-  ${props => props.users && `
+  ${props =>
+    props.users &&
+    `
     background-image: url(${usersIcon});
     height: 24px;
     width: 26px;
   `};
 
-  ${props => props.notifications && `
+  ${props =>
+    props.notifications &&
+    `
     background-image: url(${notificationsIcon});
     height: 27px;
     width: 24px;
   `};
 
-  ${props => props.options && `
+  ${props =>
+    props.options &&
+    `
     background-image: url(${optionsIcon});
     height: 6px;
     width: 26px;

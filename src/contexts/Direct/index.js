@@ -48,8 +48,8 @@ function useDirect() {
     return state.dialogues.find(dialogue => dialogue.selected);
   };
 
-  const getUI = () => {
-    return state.ui;
+  const getAboutShow = () => {
+    return state.ui.aboutUser;
   };
 
   const toggleAboutUser = () => {
@@ -63,12 +63,32 @@ function useDirect() {
     });
   };
 
+  const setDialoguesFilterQuery = query => {
+    setState({
+      ...state,
+      ui: {
+        ...state.ui,
+        dialogues: {
+          filter: {
+            query
+          }
+        }
+      }
+    });
+  };
+
+  const getDialoguesFilterQuery = () => {
+    return state.ui.dialogues.filter.query;
+  };
+
   return {
     getDialogues,
     selectDialogue,
     getSelectedDialogue,
-    getUI,
-    toggleAboutUser
+    getAboutShow,
+    toggleAboutUser,
+    setDialoguesFilterQuery,
+    getDialoguesFilterQuery
   };
 }
 

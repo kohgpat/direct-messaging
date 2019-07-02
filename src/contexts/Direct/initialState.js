@@ -1,5 +1,10 @@
 const initialState = {
   ui: {
+    dialogues: {
+      filter: {
+        query: ""
+      }
+    },
     aboutUser: {
       show: true
     }
@@ -11,8 +16,7 @@ const initialState = {
         name: "Donald Johnson",
         status: "Online",
         location: "Berlin, Germany",
-        description:
-          "Front-end developer",
+        description: "Front-end developer",
         socialNetworks: [],
         contacts: {
           phone: "+(33 1) 45 55 01 11",
@@ -31,8 +35,7 @@ const initialState = {
         name: "Anna Dormun",
         status: "Offline",
         location: "Tokyo, Japan",
-        description:
-          "Designer",
+        description: "Designer",
         socialNetworks: [],
         contacts: {
           phone: "+(33 1) 45 55 01 12",
@@ -140,8 +143,7 @@ const initialState = {
         name: "Jennifer Watkins",
         status: "Online",
         location: "Beijing, China",
-        description:
-          "Designer",
+        description: "Designer",
         socialNetworks: [],
         contacts: {
           phone: "+(33 1) 45 55 01 12",
@@ -159,8 +161,7 @@ const initialState = {
         name: "Steven Norton",
         status: "Online",
         location: "London, UK",
-        description:
-          "Designer",
+        description: "Designer",
         socialNetworks: [],
         contacts: {
           phone: "+(33 1) 45 55 01 12",

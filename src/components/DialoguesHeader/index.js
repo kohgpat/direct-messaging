@@ -1,18 +1,27 @@
 import React from "react";
+import { useDirect } from "../../contexts/Direct";
 import * as s from "./styles";
 
-const DialoguesHeader = () => (
-  <s.DialoguesHeader>
-    <s.SearchInputBar>
-      <s.SearchInputIcon />
-      <s.SearchInput />
-    </s.SearchInputBar>
+const DialoguesHeader = () => {
+  const { getDialoguesFilterQuery, setDialoguesFilterQuery } = useDirect();
+  const filterQuery = getDialoguesFilterQuery();
 
-    <s.Bookmarks>
-      <s.BookmarksCount>147</s.BookmarksCount>
-      <s.BookmarksIcon />
-    </s.Bookmarks>
-  </s.DialoguesHeader>
-);
+  return (
+    <s.DialoguesHeader>
+      <s.SearchInputBar>
+        <s.SearchInputIcon />
+        <s.SearchInput
+          value={filterQuery}
+          onChange={e => setDialoguesFilterQuery(e.target.value)}
+        />
+      </s.SearchInputBar>
+
+      <s.Bookmarks>
+        <s.BookmarksCount>147</s.BookmarksCount>
+        <s.BookmarksIcon />
+      </s.Bookmarks>
+    </s.DialoguesHeader>
+  );
+};
 
 export default DialoguesHeader;

@@ -3,17 +3,17 @@ import { useDirect } from "../../contexts/Direct";
 import * as s from "./styles";
 
 const AboutUser = () => {
-  const { getSelectedDialogue, getUI, toggleAboutUser } = useDirect();
+  const { getSelectedDialogue, getAboutShow, toggleAboutUser } = useDirect();
 
   const dialogue = getSelectedDialogue();
   const user = dialogue && dialogue.user;
-  const ui = getUI();
+  const aboutUser = getAboutShow();
 
   if (!user) {
     return null;
   }
 
-  if (!ui.aboutUser.show) {
+  if (!aboutUser.show) {
     return null;
   }
 

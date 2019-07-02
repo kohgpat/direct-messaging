@@ -24,7 +24,7 @@ export const List = styled.ul`
   overflow-y: auto;
 `;
 
-export const Item = styled.div`
+export const Item = styled.li`
   padding: 25px 30px;
   background-color: #fff;
   box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.1);

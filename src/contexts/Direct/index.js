@@ -21,6 +21,21 @@ function useDirect() {
   const [state, setState] = context;
 
   const getDialogues = () => {
+    const query =
+      state.ui.dialogues.filter.query &&
+      state.ui.dialogues.filter.query.toLowerCase();
+
+    if (query) {
+      return state.dialogues.filter(dialogue => {
+        return [
+          dialogue.user.name.toLowerCase(),
+          dialogue.user.description.toLowerCase(),
+          dialogue.user.location.toLowerCase(),
+          dialogue.message.toLowerCase()
+        ].some(data => data.includes(query));
+      });
+    }
+
     return state.dialogues;
   };
 

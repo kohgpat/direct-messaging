@@ -20,7 +20,7 @@ const AboutUser = ({ user }) => {
       </s.Controls>
 
       <s.UserInfo noPaddingTop center>
-        <s.UserAvatar />
+        <s.UserAvatar size="big" />
         <s.UserName>{user.name}</s.UserName>
         <s.UserLocation>{user.location}</s.UserLocation>
         <s.UserDescription>{user.description}</s.UserDescription>

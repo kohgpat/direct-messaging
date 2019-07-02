@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import AvatarComponent from "../Avatar";
 
 export const Chat = styled.div`
   height: 100%;
@@ -22,11 +23,7 @@ export const Header = styled.div`
   display: flex;
 `;
 
-export const HeaderUserAvatar = styled.div`
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  background-color: #f1f1f1;
+export const HeaderUserAvatar = styled(AvatarComponent)`
   margin-right: 15px;
 `;
 

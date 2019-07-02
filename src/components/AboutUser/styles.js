@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import AvatarComponent from "../Avatar";
 import closeIcon from "./images/close-icon.svg";
 
 export const AboutUser = styled.div`
@@ -52,12 +53,7 @@ export const UserInfo = styled.div`
   `}
 `;
 
-export const UserAvatar = styled.div`
-  height: 160px;
-  width: 160px;
-  background-color: #f1f1f1;
-  border-radius: 50%;
-`;
+export const UserAvatar = styled(AvatarComponent)``;
 
 export const UserName = styled.span`
   font-size: 20px;

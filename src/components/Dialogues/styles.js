@@ -1,10 +1,16 @@
 import styled from "styled-components";
+import AvatarComponent from "../Avatar";
 
 export const Dialogues = styled.div`
   height: 100%;
   width: 450px;
-  background-color: #FCFCFC;
-  background: linear-gradient(119.19deg, #FFFFFF 0%, #F8F8F8 65.34%, #FFFFFF 100%);
+  background-color: #fcfcfc;
+  background: linear-gradient(
+    119.19deg,
+    #ffffff 0%,
+    #f8f8f8 65.34%,
+    #ffffff 100%
+  );
   display: flex;
   flex-direction: column;
 `;
@@ -26,7 +32,9 @@ export const Item = styled.div`
   margin-bottom: 20px;
   position: relative;
 
-  ${props => props.selected && `
+  ${props =>
+    props.selected &&
+    `
     background-color: #292F4C;
 
     &::before {
@@ -73,11 +81,7 @@ export const ItemHeader = styled.div`
   margin-bottom: 15px;
 `;
 
-export const ItemAvatar = styled.div`
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  background-color: #D0D1D4;
+export const ItemAvatar = styled(AvatarComponent)`
   margin-right: 15px;
 `;
 
@@ -87,7 +91,7 @@ export const ItemInfo = styled.div`
 `;
 
 export const ItemUserName = styled.span`
-  color: #181C2F;
+  color: #181c2f;
   font-weight: bold;
   font-size: 18px;
   line-height: 22px;
@@ -95,14 +99,14 @@ export const ItemUserName = styled.span`
 `;
 
 export const ItemUserStatus = styled.span`
-  color: #BABBC1;
+  color: #babbc1;
   font-weight: medium;
   font-size: 14px;
   line-height: 22px;
 `;
 
 export const ItemSendAt = styled.div`
-  color: #BABBC1;
+  color: #babbc1;
   font-size: 16px;
   line-height: 22px;
 `;
@@ -110,7 +114,7 @@ export const ItemSendAt = styled.div`
 export const ItemMessage = styled.p`
   margin: 0;
   width: 80%;
-  color: #181C2F;
+  color: #181c2f;
   font-size: 14px;
   line-height: 22px;
 `;

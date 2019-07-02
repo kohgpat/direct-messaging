@@ -71,6 +71,7 @@ function useDirect() {
     setState({
       ...state,
       ui: {
+        ...state.ui,
         aboutUser: {
           show: !state.ui.aboutUser.show
         }

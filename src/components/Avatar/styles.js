@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Avatar = styled.div`
-  height: 50px;
-  width: 50px;
+  min-height: 50px;
+  min-width: 50px;
   border-radius: 50%;
   background-color: #d0d1d4;
   position: relative;
@@ -11,8 +11,8 @@ export const Avatar = styled.div`
     props.size &&
     props.size === "big" &&
     `
-    height: 160px;
-    width: 160px;
+    min-height: 160px;
+    min-width: 160px;
   `}
 `;
 

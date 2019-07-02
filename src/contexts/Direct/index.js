@@ -15,7 +15,7 @@ function useDirect() {
   const context = useContext(DirectContext);
 
   if (!context) {
-    throw new Error("useDirectUI should be used within a DirectUIContext");
+    throw new Error("useDirect should be used within a DirectContext");
   }
 
   const [state, setState] = context;
@@ -32,6 +32,7 @@ function useDirect() {
     const idx = dialogues.findIndex(d => d.id === dialogue.id);
 
     setState({
+      ...state,
       dialogues: [
         ...dialogues.slice(0, idx),
         {
@@ -47,10 +48,27 @@ function useDirect() {
     return state.dialogues.find(dialogue => dialogue.selected);
   };
 
+  const getUI = () => {
+    return state.ui;
+  };
+
+  const toggleAboutUser = () => {
+    setState({
+      ...state,
+      ui: {
+        aboutUser: {
+          show: !state.ui.aboutUser.show
+        }
+      }
+    });
+  };
+
   return {
     getDialogues,
     selectDialogue,
-    getSelectedDialogue
+    getSelectedDialogue,
+    getUI,
+    toggleAboutUser
   };
 }
 

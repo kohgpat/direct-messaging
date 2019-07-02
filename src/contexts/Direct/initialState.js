@@ -1,4 +1,9 @@
 const initialState = {
+  ui: {
+    aboutUser: {
+      show: true
+    }
+  },
   dialogues: [
     {
       id: 1,

@@ -1,5 +1,4 @@
 import React from "react";
-import { useDirectUI } from "../../contexts/Direct/UI";
 import { useDirect } from "../../contexts/Direct";
 import { ReactComponent as SendIcon } from "./images/send-icon.svg";
 import { ReactComponent as CallIcon } from "./images/call-icon.svg";
@@ -9,8 +8,7 @@ import Message from "./components/Message";
 import * as s from "./styles";
 
 const Chat = () => {
-  const { toggleAboutUser } = useDirectUI();
-  const { getSelectedDialogue } = useDirect();
+  const { getSelectedDialogue, toggleAboutUser } = useDirect();
   const dialogue = getSelectedDialogue();
   const user = dialogue && dialogue.user;
 

@@ -31,6 +31,7 @@ export const Item = styled.div`
   border-radius: 6px;
   margin-bottom: 20px;
   position: relative;
+  cursor: pointer;
 
   ${props =>
     props.selected &&

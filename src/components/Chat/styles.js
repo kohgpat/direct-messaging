@@ -21,6 +21,7 @@ export const Header = styled.div`
   padding: 30px;
   border-bottom: 1px solid #efece8;
   display: flex;
+  align-items: center;
 `;
 
 export const HeaderUserAvatar = styled(AvatarComponent)`
@@ -120,4 +121,33 @@ export const SendMessageSubmit = styled.button.attrs({ type: "submit" })`
   color: #fff;
   position: absolute;
   right: 32px;
+`;
+
+export const HeaderUserControls = styled.div`
+  display: flex;
+  margin-left: auto;
+`;
+
+export const HeaderUserControl = styled.button.attrs({
+  type: "button"
+})`
+  border: 0;
+  background-color: transparent;
+  outline: none;
+
+  &:active,
+  &:hover,
+  &:focus {
+    & > svg > path {
+      opacity: 1.0;
+    }
+
+    & > svg > g {
+      opacity: 1.0;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-right: 22px;
+  }
 `;

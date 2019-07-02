@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import searchIcon from "./images/search-icon.svg";
-import bookmarkIcon from "./images/bookmark-icon.svg";
 
 export const DialoguesHeader = styled.div`
   padding: 30px;
@@ -41,7 +40,7 @@ export const SearchInput = styled.input.attrs({
   padding: 16px 32px 16px 50px;
 
   &::placeholder {
-    color: #B6B7BC;
+    color: #b6b7bc;
   }
 `;
 
@@ -54,7 +53,7 @@ export const Bookmarks = styled.div`
 export const BookmarksCount = styled.span`
   font-size: 14px;
   font-weight: bold;
-  color: #D0D1D7;
+  color: #d0d1d7;
 `;
 
 export const BookmarksIcon = styled.button.attrs({ type: "button" })`
@@ -64,8 +63,12 @@ export const BookmarksIcon = styled.button.attrs({ type: "button" })`
   border: none;
   background-color: transparent;
   cursor: pointer;
-  background-image: url(${bookmarkIcon});
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+
+  &:active,
+  &:focus,
+  &:hover {
+    & > svg > path {
+      opacity: 1;
+    }
+  }
 `;

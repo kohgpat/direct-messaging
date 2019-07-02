@@ -7,7 +7,7 @@ import { ReactComponent as OptionsIcon } from "./images/options-icon.svg";
 import Message from "./components/Message";
 import * as s from "./styles";
 
-const Chat = ({ dialogue }) => {
+const Chat = ({ dialogue, user }) => {
   const { toggleAboutUser } = useDirectUI();
 
   if (!dialogue) {
@@ -17,7 +17,7 @@ const Chat = ({ dialogue }) => {
   return (
     <s.Chat dialogue={dialogue}>
       <s.Header>
-        <s.HeaderUserAvatar />
+        <s.HeaderUserAvatar status={user.status} />
 
         <s.HeaderUserInfo>
           <s.HeaderUserName onClick={toggleAboutUser}>

@@ -11,7 +11,7 @@ const Dialogues = ({ dialogues }) => {
         {dialogues.map(item => (
           <s.Item key={item.id} selected={item.id === 3}>
             <s.ItemHeader>
-              <s.ItemAvatar />
+              <s.ItemAvatar status={item.user.status} />
 
               <s.ItemInfo>
                 <s.ItemUserName>{item.user.name}</s.ItemUserName>

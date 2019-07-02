@@ -29,7 +29,7 @@ const dialogues = [
     id: 3,
     user: {
       name: "Tobias Williams",
-      status: "Offline",
+      status: "Online",
       location: "Paris, France",
       description:
         "Help people to build websites and apps + grow awareness in social media 🔥",
@@ -133,13 +133,19 @@ const dialogues = [
   }
 ];
 
+const currentUser = {
+  id: 10,
+  name: "Bob Ross",
+  status: "Online"
+};
+
 const Direct = () => {
   return (
     <Screen horizontal>
       <DirectUIProvider>
-        <LeftMenu />
+        <LeftMenu currentUser={currentUser} />
         <Dialogues dialogues={dialogues} />
-        <Chat dialogue={dialogues[2]} />
+        <Chat dialogue={dialogues[2]} user={dialogues[2].user} />
         <AboutUser user={dialogues[2].user} />
       </DirectUIProvider>
     </Screen>

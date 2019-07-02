@@ -9,9 +9,9 @@ import { ReactComponent as OptionsIcon } from "./images/options-icon.svg";
 import { ReactComponent as SettingsIcon } from "./images/settings-icon.svg";
 import * as s from "./styles";
 
-const LeftMenu = () => (
+const LeftMenu = ({ currentUser }) => (
   <s.LeftMenu>
-    <LeftMenuCurrentUser />
+    <LeftMenuCurrentUser currentUser={currentUser} />
 
     <s.Nav>
       <s.NavItem href="#" alt="Home">

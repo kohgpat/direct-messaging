@@ -33,6 +33,7 @@ export const ControlClose = styled.button.attrs({ type: "button" })`
 export const UserInfo = styled.div`
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
   padding: 30px;
 
   ${props =>
@@ -124,6 +125,7 @@ export const UserMediaImages = styled.div`
   margin-top: 20px;
   display: grid;
   gap: 11px;
+  grid-gap: 11px;
   grid-template-columns: 76px 76px 76px;
 `;
 

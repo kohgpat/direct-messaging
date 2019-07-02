@@ -30,6 +30,7 @@ export const SearchInput = styled.input.attrs({
   name: "q",
   placeholder: "Enter for search…"
 })`
+  -webkit-appearance: none;
   height: 48px;
   font-size: 16px;
   line-height: 24px;

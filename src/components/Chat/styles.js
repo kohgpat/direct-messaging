@@ -134,6 +134,7 @@ export const HeaderUserControl = styled.button.attrs({
   border: 0;
   background-color: transparent;
   outline: none;
+  cursor: pointer;
 
   &:active,
   &:hover,

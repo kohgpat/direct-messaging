@@ -1,9 +1,9 @@
-import React from "react";
-import { useDirect } from "../../contexts/Direct";
-import * as s from "./styles";
+import React from 'react';
+import {useDirect} from '../../contexts/Direct';
+import * as s from './styles';
 
 const AboutUser = () => {
-  const { getSelectedDialogue, getAboutShow, toggleAboutUser } = useDirect();
+  const {getSelectedDialogue, getAboutShow, toggleAboutUser} = useDirect();
 
   const dialogue = getSelectedDialogue();
   const user = dialogue && dialogue.user;
@@ -61,6 +61,12 @@ const AboutUser = () => {
           </s.UserMediaHeader>
 
           <s.UserMediaImages>
+            <s.UserMediaImage />
+            <s.UserMediaImage />
+            <s.UserMediaImage />
+            <s.UserMediaImage />
+            <s.UserMediaImage />
+            <s.UserMediaImage />
             <s.UserMediaImage />
             <s.UserMediaImage />
             <s.UserMediaImage />

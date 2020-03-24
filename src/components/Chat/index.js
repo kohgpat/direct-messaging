@@ -30,6 +30,7 @@ const Chat = () => {
     if (keysPressed.has('Shift') && keysPressed.has('Enter')) {
       submit();
     }
+    // eslint-disable-next-line
   }, [keysPressed.size]);
 
   const submit = e => {

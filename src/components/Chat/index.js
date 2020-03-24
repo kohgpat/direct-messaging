@@ -26,9 +26,16 @@ const Chat = () => {
   const submit = e => {
     e.preventDefault();
 
+    if (!messageText.trim().length) {
+      return;
+    }
+
     addMessageToDialogue(dialogue, messageText);
 
     setMessageText('');
+
+    // TODO:
+    // 1. Handle submit on shift + enter
   };
 
   if (!dialogue) {

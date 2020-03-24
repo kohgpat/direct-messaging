@@ -16,12 +16,12 @@ const Chat = () => {
   const [messageText, setMessageText] = useState('');
   const contentBottom = useRef();
 
-  useEffect(() => {
-    contentBottom.current.scrollIntoView({behaviour: 'smooth'});
-  }, []);
-
   const dialogue = getSelectedDialogue();
   const user = dialogue && dialogue.user;
+
+  useEffect(() => {
+    contentBottom.current.scrollIntoView({behaviour: 'smooth'});
+  }, [dialogue.messages.length]);
 
   const submit = e => {
     e.preventDefault();

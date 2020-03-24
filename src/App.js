@@ -1,10 +1,8 @@
 import React from 'react';
-import Direct from "./screens/Direct";
+import Direct from './screens/Direct';
 
 function App() {
-  return (
-    <Direct />
-  );
+  return <Direct />;
 }
 
 export default App;

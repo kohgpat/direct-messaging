@@ -22,6 +22,8 @@ const Chat = () => {
     e.preventDefault();
 
     addMessageToDialogue(dialogue, messageText);
+
+    setMessageText('');
   };
 
   if (!dialogue) {

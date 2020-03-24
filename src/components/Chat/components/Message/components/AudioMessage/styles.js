@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import timelineImage from "./images/timeline-image.svg";
-import playIcon from "./images/play-icon.svg";
+import styled from 'styled-components';
+import timelineImage from './images/timeline-image.svg';
+import playIcon from './images/play-icon.svg';
 
 export const Message = styled.div`
   display: flex;
@@ -30,14 +30,14 @@ export const MessageContent = styled.div`
   border-radius: 35px;
 `;
 
-export const MessagePlayButton = styled.button.attrs({ type: "button" })`
+export const MessagePlayButton = styled.button.attrs({type: 'button'})`
   height: 40px;
   width: 40px;
-  background-color: #F14C4F;
+  background-color: #f14c4f;
   background-image: url(${playIcon});
   background-repeat: no-repeat;
   background-position: center;
-  border: 1px solid #F14C4F;
+  border: 1px solid #f14c4f;
   border-radius: 50%;
   cursor: pointer;
   display: flex;
@@ -58,7 +58,7 @@ export const MessageTimeline = styled.div`
 `;
 
 export const MessageLength = styled.span`
-  color: #1A2028;
+  color: #1a2028;
   font-size: 14px;
   font-weight: bold;
   line-height: 22px;

@@ -98,7 +98,7 @@ const initialState = {
           },
           sendedAt: 'Yesterday 19:26 PM',
           message: null,
-          length: '01.24',
+          length: '01:24',
           type: 'audio',
         },
         {

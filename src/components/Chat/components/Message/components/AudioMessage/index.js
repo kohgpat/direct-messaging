@@ -1,7 +1,7 @@
-import React from "react";
-import * as s from "./styles";
+import React from 'react';
+import * as s from './styles';
 
-const AudioMessage = ({ message }) => {
+const AudioMessage = ({message}) => {
   const isCurrentUser = message.user.id === 10;
 
   return (

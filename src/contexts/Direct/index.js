@@ -1,5 +1,6 @@
-import React, { useState, useMemo, useContext } from "react";
-import initialState from "./initialState";
+import React, {useState, useMemo, useContext} from 'react';
+import nanoid from 'nanoid';
+import initialState from './initialState';
 
 const DirectContext = React.createContext();
 
@@ -15,7 +16,7 @@ function useDirect() {
   const context = useContext(DirectContext);
 
   if (!context) {
-    throw new Error("useDirect should be used within a DirectContext");
+    throw new Error('useDirect should be used within a DirectContext');
   }
 
   const [state, setState] = context;
@@ -31,7 +32,7 @@ function useDirect() {
           dialogue.user.name.toLowerCase(),
           dialogue.user.description.toLowerCase(),
           dialogue.user.location.toLowerCase(),
-          dialogue.message.toLowerCase()
+          dialogue.message.toLowerCase(),
         ].some(data => data.includes(query));
       });
     }
@@ -42,7 +43,7 @@ function useDirect() {
   const selectDialogue = dialogue => {
     const dialogues = state.dialogues.map(d => ({
       ...d,
-      selected: false
+      selected: false,
     }));
     const idx = dialogues.findIndex(d => d.id === dialogue.id);
 
@@ -52,10 +53,40 @@ function useDirect() {
         ...dialogues.slice(0, idx),
         {
           ...dialogues[idx],
-          selected: true
+          selected: true,
         },
-        ...dialogues.slice(idx + 1)
-      ]
+        ...dialogues.slice(idx + 1),
+      ],
+    });
+  };
+
+  const addMessageToDialogue = (dialogue, messageText) => {
+    const dialogues = state.dialogues;
+    const idx = dialogues.findIndex(d => d.id === dialogue.id);
+
+    setState({
+      ...state,
+      dialogues: [
+        ...dialogues.slice(0, idx),
+        {
+          ...dialogues[idx],
+          messages: [
+            ...dialogues[idx].messages,
+            {
+              id: nanoid(),
+              user: {
+                id: 1,
+                name: 'Bob Ross',
+              },
+              sendedAt: 'Today',
+              message: messageText,
+              type: 'text',
+              length: null,
+            },
+          ],
+        },
+        ...dialogues.slice(idx + 1),
+      ],
     });
   };
 
@@ -73,9 +104,9 @@ function useDirect() {
       ui: {
         ...state.ui,
         aboutUser: {
-          show: !state.ui.aboutUser.show
-        }
-      }
+          show: !state.ui.aboutUser.show,
+        },
+      },
     });
   };
 
@@ -86,10 +117,10 @@ function useDirect() {
         ...state.ui,
         dialogues: {
           filter: {
-            query
-          }
-        }
-      }
+            query,
+          },
+        },
+      },
     });
   };
 
@@ -101,11 +132,12 @@ function useDirect() {
     getDialogues,
     selectDialogue,
     getSelectedDialogue,
+    addMessageToDialogue,
     getAboutShow,
     toggleAboutUser,
     setDialoguesFilterQuery,
-    getDialoguesFilterQuery
+    getDialoguesFilterQuery,
   };
 }
 
-export { DirectProvider, useDirect };
+export {DirectProvider, useDirect};

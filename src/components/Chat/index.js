@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useDirect} from '../../contexts/Direct';
 import {ReactComponent as SendIcon} from './images/send-icon.svg';
 import {ReactComponent as CallIcon} from './images/call-icon.svg';
@@ -8,9 +8,21 @@ import Message from './components/Message';
 import * as s from './styles';
 
 const Chat = () => {
-  const {getSelectedDialogue, toggleAboutUser} = useDirect();
+  const {
+    getSelectedDialogue,
+    addMessageToDialogue,
+    toggleAboutUser,
+  } = useDirect();
+  const [messageText, setMessageText] = useState('');
+
   const dialogue = getSelectedDialogue();
   const user = dialogue && dialogue.user;
+
+  const submit = e => {
+    e.preventDefault();
+
+    addMessageToDialogue(dialogue, messageText);
+  };
 
   if (!dialogue) {
     return <s.Chat />;
@@ -56,8 +68,11 @@ const Chat = () => {
         ))}
       </s.Content>
 
-      <s.SendMessage>
-        <s.SendMessageInput />
+      <s.SendMessage onSubmit={submit}>
+        <s.SendMessageInput
+          value={messageText}
+          onChange={e => setMessageText(e.target.value)}
+        />
         <s.SendMessageSubmit>
           <SendIcon />
         </s.SendMessageSubmit>

@@ -1,4 +1,5 @@
 import React, {useState, useRef, useEffect} from 'react';
+import useMultiKeyPress from '../../hooks/use-multi-key-press';
 import {useDirect} from '../../contexts/Direct';
 import {ReactComponent as SendIcon} from './images/send-icon.svg';
 import {ReactComponent as CallIcon} from './images/call-icon.svg';
@@ -23,8 +24,16 @@ const Chat = () => {
     contentBottom.current.scrollIntoView({behaviour: 'smooth'});
   }, [dialogue.messages.length]);
 
+  const keysPressed = useMultiKeyPress();
+
+  useEffect(() => {
+    if (keysPressed.has('Shift') && keysPressed.has('Enter')) {
+      submit();
+    }
+  }, [keysPressed.size]);
+
   const submit = e => {
-    e.preventDefault();
+    e && e.preventDefault();
 
     if (!messageText.trim().length) {
       return;
@@ -33,9 +42,6 @@ const Chat = () => {
     addMessageToDialogue(dialogue, messageText);
 
     setMessageText('');
-
-    // TODO:
-    // 1. Handle submit on shift + enter
   };
 
   if (!dialogue) {

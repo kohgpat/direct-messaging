@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import {useDirect} from '../../contexts/Direct';
 import {ReactComponent as SendIcon} from './images/send-icon.svg';
 import {ReactComponent as CallIcon} from './images/call-icon.svg';
@@ -14,6 +14,11 @@ const Chat = () => {
     toggleAboutUser,
   } = useDirect();
   const [messageText, setMessageText] = useState('');
+  const contentBottom = useRef();
+
+  useEffect(() => {
+    contentBottom.current.scrollIntoView({behaviour: 'smooth'});
+  }, []);
 
   const dialogue = getSelectedDialogue();
   const user = dialogue && dialogue.user;
@@ -68,6 +73,8 @@ const Chat = () => {
         {dialogue.messages.map(message => (
           <Message key={message.id} message={message} />
         ))}
+
+        <s.ContentBottom ref={contentBottom} />
       </s.Content>
 
       <s.SendMessage onSubmit={submit}>

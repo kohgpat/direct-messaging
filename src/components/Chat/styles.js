@@ -76,6 +76,8 @@ export const Content = styled.div`
   overflow-y: auto;
 `;
 
+export const ContentBottom = styled.div``;
+
 export const SendMessage = styled.form`
   margin-top: auto;
   min-height: 72px;

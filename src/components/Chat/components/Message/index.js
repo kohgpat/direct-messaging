@@ -1,16 +1,16 @@
-import React from "react";
-import AudioMessage from "./components/AudioMessage";
-import TextMessage from "./components/TextMessage";
+import React from 'react';
+import AudioMessage from './components/AudioMessage';
+import TextMessage from './components/TextMessage';
 
-const Message = ({ message }) => {
+const Message = ({message}) => {
   let comp;
 
   switch (message.type) {
-    case "text": {
+    case 'text': {
       comp = <TextMessage message={message} />;
       break;
     }
-    case "audio": {
+    case 'audio': {
       comp = <AudioMessage message={message} />;
       break;
     }

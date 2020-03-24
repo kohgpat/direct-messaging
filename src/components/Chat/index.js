@@ -1,14 +1,14 @@
-import React from "react";
-import { useDirect } from "../../contexts/Direct";
-import { ReactComponent as SendIcon } from "./images/send-icon.svg";
-import { ReactComponent as CallIcon } from "./images/call-icon.svg";
-import { ReactComponent as VideoCallIcon } from "./images/video-call-icon.svg";
-import { ReactComponent as OptionsIcon } from "./images/options-icon.svg";
-import Message from "./components/Message";
-import * as s from "./styles";
+import React from 'react';
+import {useDirect} from '../../contexts/Direct';
+import {ReactComponent as SendIcon} from './images/send-icon.svg';
+import {ReactComponent as CallIcon} from './images/call-icon.svg';
+import {ReactComponent as VideoCallIcon} from './images/video-call-icon.svg';
+import {ReactComponent as OptionsIcon} from './images/options-icon.svg';
+import Message from './components/Message';
+import * as s from './styles';
 
 const Chat = () => {
-  const { getSelectedDialogue, toggleAboutUser } = useDirect();
+  const {getSelectedDialogue, toggleAboutUser} = useDirect();
   const dialogue = getSelectedDialogue();
   const user = dialogue && dialogue.user;
 

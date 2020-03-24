@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import AvatarComponent from "../Avatar";
+import styled from 'styled-components';
+import AvatarComponent from '../Avatar';
 
 export const Chat = styled.div`
   height: 100%;
@@ -56,7 +56,7 @@ export const HeaderUserStatus = styled.span`
 
 export const HeaderUserSeparator = styled.div`
   margin: 0 8px;
-  color: #A3A4AC;
+  color: #a3a4ac;
   font-size: 14px;
   line-height: 22px;
 `;
@@ -85,22 +85,21 @@ export const SendMessage = styled.div`
   box-shadow: 0px -8px 30px rgba(0, 0, 0, 0.05);
   display: flex;
   align-items: center;
-  position: relative;
 `;
 
 export const SendMessageInput = styled.textarea.attrs({
-  name: "message",
-  rows: 1
+  name: 'message',
+  rows: 1,
 })`
   min-height: 48px;
   font-size: 16px;
   background-color: #f9f8f8;
   border-radius: 24px;
   border: 1px solid #f9f8f8;
-  width: 100%;
   padding: 16px 32px;
   resize: none;
   outline: none;
+  flex: 1;
 
   &:active,
   &:focus {
@@ -108,7 +107,7 @@ export const SendMessageInput = styled.textarea.attrs({
   }
 `;
 
-export const SendMessageSubmit = styled.button.attrs({ type: "submit" })`
+export const SendMessageSubmit = styled.button.attrs({type: 'submit'})`
   height: 52px;
   width: 52px;
   border-radius: 50%;
@@ -119,8 +118,7 @@ export const SendMessageSubmit = styled.button.attrs({ type: "submit" })`
   align-items: center;
   justify-content: center;
   color: #fff;
-  position: absolute;
-  right: 32px;
+  margin-left: 16px;
 `;
 
 export const HeaderUserControls = styled.div`
@@ -129,7 +127,7 @@ export const HeaderUserControls = styled.div`
 `;
 
 export const HeaderUserControl = styled.button.attrs({
-  type: "button"
+  type: 'button',
 })`
   border: 0;
   background-color: transparent;
@@ -140,11 +138,11 @@ export const HeaderUserControl = styled.button.attrs({
   &:hover,
   &:focus {
     & > svg > path {
-      opacity: 1.0;
+      opacity: 1;
     }
 
     & > svg > g {
-      opacity: 1.0;
+      opacity: 1;
     }
   }
 
